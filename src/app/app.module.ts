@@ -6,12 +6,18 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MainComponent } from './main/main.component';
 import { NavbarmainComponent } from './navbarmain/navbarmain.component';
+import { ContactComponent } from './contact/contact.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { MiperfilComponent } from './miperfil/miperfil.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    NavbarmainComponent
+    NavbarmainComponent,
+    ContactComponent,
+    PortfolioComponent,
+    MiperfilComponent
   ],
   imports: [
     BrowserModule,
