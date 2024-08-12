@@ -1,36 +1,61 @@
-<nav class="navbar navbar-dark black">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <!-- <img src="../assets/image/icon/NovaPage-ico.ico" class="me-2" height="50" alt="" loading="lazy"/> -->
-      <img src="https://drive.google.com/thumbnail?id=1ZZyx_ICPqQ23YA2dVES_Ge6KJLPwVyUP&sz=w1000" class="me-2" height="50" alt="" loading="lazy"/>
-
-      <small>NovaPage</small>
-    </a>
-    <ul class="navbar-nav flex-row">
-      <li class="nav-item mx-2">
-        <a class="nav-link" [routerLink]="['/main']" href="#">
-          <!-- <img src="../assets/image/navbar/homenavbar-ligth.png" class="me-2" height="40" alt="" loading="lazy"> -->
-          <img src="https://drive.google.com/thumbnail?id=1LGoTmb_kMWbFYmkbSHLe7aXfC4nG4A7N&sz=w1000" class="me-2" height="40" alt="" loading="lazy">
+<!-- Contenido colapsable externo -->
+<div class="collapse" id="navbarToggleExternalContent">
+  <div class="black p-4">
+    <h5 class="text-white h4">NovaPage</h5>
+    <ul class="navbar-nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link text-white" [routerLink]="['/main']">
+          <img src="https://drive.google.com/thumbnail?id=1LGoTmb_kMWbFYmkbSHLe7aXfC4nG4A7N&sz=w1000" class="me-2" height="40" alt="" loading="lazy"> Home
         </a>
       </li>
-      <li class="nav-item mx-2">
-        <a class="nav-link" [routerLink]="['/miperfil']" href="#">
-          <!-- <img src="../assets/image/navbar/usernavbar-ligth.png" class="me-2" height="40" alt="" loading="lazy"> -->
-          <img src="https://drive.google.com/thumbnail?id=1zJWDgJKxjGgRQSNYckd0WNYsho-oNJaU&sz=w1000" class="me-2" height="40" alt="" loading="lazy">
+      <li class="nav-item">
+        <a class="nav-link text-white" [routerLink]="['/miperfil']">
+          <img src="https://drive.google.com/thumbnail?id=1zJWDgJKxjGgRQSNYckd0WNYsho-oNJaU&sz=w1000" class="me-2" height="40" alt="" loading="lazy"> Mi Perfil
         </a>
       </li>
-      <li class="nav-item mx-2">
-        <a class="nav-link" [routerLink]="['/contact']" href="#">
-          <!-- <img src="../assets/image/navbar/contactanosnavbar-ligth.png" class="me-2" height="40" alt="" loading="lazy"> -->
-          <img src="https://drive.google.com/thumbnail?id=12yjSA_CKQxr4M8iPzb_81XjvP-5ij7e4&sz=w1000" class="me-2" height="40" alt="" loading="lazy">
+      <li class="nav-item">
+        <a class="nav-link text-white" [routerLink]="['/contact']">
+          <img src="https://drive.google.com/thumbnail?id=12yjSA_CKQxr4M8iPzb_81XjvP-5ij7e4&sz=w1000" class="me-2" height="40" alt="" loading="lazy"> Contacto
         </a>
       </li>
-      <li class="nav-item mx-2">
-        <a class="nav-link" [routerLink]="['/portfolio']" href="#">
-          <!-- <img src="../assets/image/navbar/proyectosnavbar-ligth.png" class="me-2" height="40" alt="" loading="lazy"> -->
-          <img src="https://drive.google.com/thumbnail?id=17WIwFv1HR9zN9bqo9dQn4Dq_V0uOa516&sz=w1000" height="40" alt="" loading="lazy">
+      <li class="nav-item">
+        <a class="nav-link text-white" [routerLink]="['/portfolio']">
+          <img src="https://drive.google.com/thumbnail?id=17WIwFv1HR9zN9bqo9dQn4Dq_V0uOa516&sz=w1000" class="me-2" height="40" alt="" loading="lazy"> Portafolio
         </a>
       </li>
     </ul>
   </div>
+</div>
+
+<!-- Navbar con botón de hamburguesa -->
+<nav class="navbar navbar-dark black">
+  <div class="container-fluid">
+    <a class="navbar-brand" [routerLink]="['/main']">
+      <img src="https://drive.google.com/thumbnail?id=1ZZyx_ICPqQ23YA2dVES_Ge6KJLPwVyUP&sz=w1000" class="me-2" height="50" alt="" loading="lazy"/>
+      <small>NovaPage</small>
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>    
+  </div>  
 </nav>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var navbarToggler = document.querySelector('.navbar-toggler');
+    var navbarCollapse = document.getElementById('navbarToggleExternalContent');
+
+    navbarToggler.addEventListener('click', function() {
+      var bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+        toggle: true
+      });
+    });
+
+    navbarCollapse.addEventListener('shown.bs.collapse', function() {
+      console.log('El menú se ha desplegado.');
+    });
+  });
+</script>
+
+
