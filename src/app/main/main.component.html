@@ -1,27 +1,43 @@
 <app-navbarmain></app-navbarmain>
 <div class="hero-section d-flex align-items-center justify-content-center text-center">
-<!-- app.component.html video background -->
-<div class="video-background">
-    <div class="video-foreground">
-      <iframe src="https://www.youtube.com/embed/DGy_bSUzCBA?autoplay=1&mute=1&loop=1&playlist=DGy_bSUzCBA&controls=0&showinfo=0&modestbranding=1&iv_load_policy=3" 
-              frameborder="0" 
-              allow="autoplay; encrypted-media" 
-              allowfullscreen>
-      </iframe>
+    <div class="video-background">
+      <div class="video-foreground">
+        <iframe src="https://www.youtube.com/embed/DGy_bSUzCBA?autoplay=1&mute=1&loop=1&playlist=DGy_bSUzCBA&controls=0&showinfo=0&modestbranding=1&iv_load_policy=3" 
+                frameborder="0" 
+                allow="autoplay; encrypted-media" 
+                allowfullscreen>
+        </iframe>
+      </div>
     </div>
-  </div>
-  
-  
     <div class="container">
       <div class="row">
         <div class="col-12 col-md-6 mb-4 mb-md-0">
           <h1 class="display-4">Bienvenido a NovaPage</h1>
           <p class="lead">Transforma tus ideas en realidad con nuestra plataforma innovadora.</p>
-          <a [routerLink]="['/contact']" class="btn btn-primary btn-lg">¡Contactanos!</a>
+          <a href="#" class="btn btn-primary btn-lg">Saber más</a>
         </div>
         <div class="col-12 col-md-6">
           <img src="https://drive.google.com/thumbnail?id=1ZZyx_ICPqQ23YA2dVES_Ge6KJLPwVyUP&sz=w1000" class="img-fluid" alt="Imagen de impacto">
         </div>
       </div>
     </div>
-</div>
+  </div>
+  
+
+  <div class="about-section d-flex align-items-center justify-content-center text-center bg-light py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4 mb-4 animate__animated animate__fadeInLeft">
+          <h2 class="display-5">Quiénes somos?</h2>
+          <p class="lead">Somos una empresa dedicada a transformar ideas en soluciones innovadoras, con un equipo de expertos en diversas áreas.</p>
+        </div>
+        <div class="col-12 col-md-4 mb-4 animate__animated animate__zoomIn">
+          <img src="https://via.placeholder.com/300" class="img-fluid w-100" alt="Imagen representativa" style="border: none;">
+        </div>
+        <div class="col-12 col-md-4 mb-4 animate__animated animate__fadeInRight">
+          <h2 class="display-5">Misión y Visión</h2>
+          <p class="lead">Nuestra misión es proporcionar herramientas y servicios que impulsen el crecimiento y la innovación. Nuestra visión es ser líderes en el mercado, reconocidos por nuestra calidad y compromiso.</p>
+        </div>
+      </div>
+    </div>
+  </div>
