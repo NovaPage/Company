@@ -1,9 +1,17 @@
 <app-navbarmain></app-navbarmain>
 <div class="hero-section d-flex align-items-center justify-content-center text-center">
-    <video autoplay muted loop id="bg-video">
-      <source src="/src/assets/videos/wolrd.mp4" type="video/mp4">
-      Tu navegador no soporta la reproducción de videos.
-    </video>
+<!-- app.component.html video background -->
+<div class="video-background">
+    <div class="video-foreground">
+      <iframe src="https://www.youtube.com/embed/DGy_bSUzCBA?autoplay=1&mute=1&loop=1&playlist=DGy_bSUzCBA&controls=0&showinfo=0&modestbranding=1&iv_load_policy=3" 
+              frameborder="0" 
+              allow="autoplay; encrypted-media" 
+              allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+  
+  
     <div class="container">
       <div class="row">
         <div class="col-12 col-md-6 mb-4 mb-md-0">

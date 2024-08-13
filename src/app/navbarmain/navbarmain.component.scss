@@ -14,3 +14,11 @@
     position: fixed; /* Para que la navbar permanezca fija en la parte superior */
     width: 100%; /* Para que ocupe todo el ancho de la pantalla */
   }
+  .nav-item img {
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-item img:hover {
+    transform: scale(1.2);
+  }
+  
