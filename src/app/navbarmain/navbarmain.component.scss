@@ -9,4 +9,8 @@
       display: none;
     }
   }
-  
+  .custom-navbar {
+    z-index: 9999; /* Un valor alto para asegurarte de que esté por encima de otros elementos */
+    position: fixed; /* Para que la navbar permanezca fija en la parte superior */
+    width: 100%; /* Para que ocupe todo el ancho de la pantalla */
+  }
