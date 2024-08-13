@@ -1,0 +1,21 @@
+.hero-section {
+    height: 100vh;
+    background:url('https://drive.google.com/thumbnail?id=1ZZyx_ICPqQ23YA2dVES_Ge6KJLPwVyUP&sz=w1000') no-repeat center center/cover;
+    color: white;
+  }
+  
+  .hero-section .container {
+    z-index: 2;
+  }
+  
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
