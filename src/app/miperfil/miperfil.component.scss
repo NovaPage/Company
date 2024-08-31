@@ -1,0 +1,159 @@
+/* Paleta de colores */
+$turquoise: #0cffe1;
+$dark-magenta: #7b1346;
+$text-color: #ffffff;
+$background-color: #1c1c1c;
+
+/* Estructura de las secciones */
+.fullscreen {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+.half {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left {
+  background-color: $dark-magenta;
+}
+
+.right {
+  background-color: $turquoise;
+}
+
+/* Imagen interactiva */
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
+
+  &:hover {
+    transform: rotate(360deg) scale(1.1); // Rotación y escala futurista
+
+    .overlay {
+      transform: scale(1.5);
+    }
+  }
+
+  .profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    mix-blend-mode: overlay;
+    border-radius: 50%;
+    transition: transform 0.5s ease-in-out;
+  }
+}
+
+/* Botón interactivo */
+.who-am-i-btn {
+  font-size: 24px;
+  padding: 15px 30px;
+  border-radius: 50px;
+  transition: background-color 0.3s, transform 0.3s;
+
+  &:hover {
+    background-color: darken($turquoise, 15%);
+    transform: scale(1.1);
+  }
+}
+
+/* Cards interactivas */
+.interactive-card {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: lighten($dark-magenta, 10%);
+  transition: background-color 0.3s, transform 0.3s;
+
+  &.happy {
+    background-color: lighten(green, 20%);
+  }
+
+  &.sad {
+    background-color: lighten(blue, 20%);
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* Calculadora interactiva */
+.calculator {
+  width: 100%;
+  max-width: 300px;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  background-color: lighten($dark-magenta, 20%);
+  text-align: center;
+
+  .display {
+    font-size: 32px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: $background-color;
+    color: $text-color;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+
+  .keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+
+    button {
+      font-size: 24px;
+      padding: 15px;
+      border-radius: 5px;
+      background-color: $turquoise;
+      color: $background-color;
+      border: none;
+      transition: background-color 0.3s, transform 0.3s;
+
+      &:hover {
+        background-color: darken($turquoise, 15%);
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+/* Estilos responsivos adicionales */
+@media (max-width: 768px) {
+  .fullscreen {
+    flex-direction: column;
+  }
+
+  .half {
+    flex: 1 1 100%;
+  }
+
+  .calculator,
+  .interactive-card {
+    max-width: 100%;
+  }
+}

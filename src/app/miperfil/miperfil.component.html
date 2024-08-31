@@ -1,2 +1,81 @@
 <app-navbarmain></app-navbarmain>
-<h1>Este es mi perfil descriptivo y creativo</h1>
+
+<!-- Sección 1: Imagen y botón -->
+<div class="section fullscreen" id="section1">
+  <div class="half left">
+    <!-- Imagen interactiva -->
+    <div class="image-container">
+      <img src="assets/profile-picture.jpg" alt="Profile" class="profile-image" />
+      <div class="overlay"></div>
+    </div>
+  </div>
+  <div class="half right">
+    <!-- Botón interactivo -->
+    <button class="btn btn-primary who-am-i-btn" (click)="scrollToSection('#section2')">¿Quién soy?</button>
+  </div>
+</div>
+
+<!-- Sección 2: Primera columna de preguntas -->
+<div class="section" id="section2">
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <div *ngFor="let card of cards.slice(0, 3)" class="card interactive-card" [ngClass]="{'happy': card.state === 'happy', 'sad': card.state === 'sad'}">
+        <div class="card-body">
+          <h5 class="card-title">{{ card.title }}</h5>
+          <p class="card-text">{{ card.question }}</p>
+          <div>
+            <button class="btn btn-success me-2" (click)="setCardState(card, 'happy')">Feliz</button>
+            <button class="btn btn-primary" (click)="setCardState(card, 'sad')">Triste</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Calculadora -->
+    <div class="col-12 col-md-6">
+      <div class="calculator">
+        <div class="display">{{ calculator.display }}</div>
+        <div class="keys">
+          <button *ngFor="let key of calculator.keys" (click)="onCalculatorKeyPress(key)">{{ key }}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sección 3: Segunda columna de preguntas -->
+<div class="section" id="section3">
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <div *ngFor="let card of cards.slice(3, 6)" class="card interactive-card" [ngClass]="{'happy': card.state === 'happy', 'sad': card.state === 'sad'}">
+        <div class="card-body">
+          <h5 class="card-title">{{ card.title }}</h5>
+          <p class="card-text">{{ card.question }}</p>
+          <div>
+            <button class="btn btn-success me-2" (click)="setCardState(card, 'happy')">Feliz</button>
+            <button class="btn btn-primary" (click)="setCardState(card, 'sad')">Triste</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 
+<div ESTE DIV OCUPARA TODA LA PANTALLA>
+  <div ESTE LA MITAD IZQUIERDA>
+    un espacio para una imagen que cuando se pase el mouse por encima se cree un efecto super futurista, usa ideas de otros creadores para aplicar interactividad a la imagen, este espacio sera circular
+  </div>
+  <div ESTE LA MITAD DERECHA>
+    un espacio para un boton que dira ¿Quien soy?  y cuando se haga click se mande a la seccion que sigue de la pagina que seria el div #padre2
+  </div>
+</div>
+<div ESTE DIV OCUPARA TODA LA PANTALLA #padre2>
+  <div ESTE LA MITAD IZQUIERDA>
+    aqui estaran unos desplegables tipo cards que cuando se oprima despliegue la informacion con una pregunta que diga "Estas feliz o triste?" y dependiendo de eso el card se pondra azul si es triste y verde si es feliz
+  </div>
+  <div ESTE LA MITAD DERECHA>
+    aqui una calculadora elegante funcional e interactiva que se vea elegante
+  </div>
+</div>
+
+Todo esto usando responsive, que manejen el mismo estilo todo y que se vea elegante, muy interactivo y añade 5 animaciones o funciones sorpresa para el codigo, tambien comenta todo el codigo -->
